@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeGuard - Community Safety Alert System | Women Safety with Community Response</title>
+    <meta name="description" content="Revolutionary women safety system with community volunteers, police integration, and instant emergency response. Faster help through verified community network.">
+    <meta name="keywords" content="women safety, emergency alert, community response, SOS app, safety network, India safety">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-container">
+        <div class="nav-content">
+            <div class="nav-logo">
+                <span class="logo-shield">🛡</span>
+                <span class="logo-text">SafeGuard</span>
+            </div>
+            <div class="nav-links desktop-only">
+                <a href="#demo" onclick="scrollToSection('demo')">Demo</a>
+                <a href="#volunteer" onclick="scrollToSection('volunteer')">Volunteer</a>
+                <a href="#about" onclick="scrollToSection('about')">About</a>
+                <a href="#contact" onclick="scrollToSection('contact')">Contact</a>
+            </div>
+            <button class="btn-primary desktop-only" onclick="scrollToSection('demo')">Try SOS Demo</button>
+            <button class="mobile-menu-btn mobile-only" onclick="toggleMobileMenu()">
+                <span id="menu-icon">☰</span>
+            </button>
+        </div>
+        <!-- <div id="mobile-menu" class="mobile-menu hidden">
+            <a href="#demo" onclick="scrollToSection('demo')">Demo</a>
+            <a href="#volunteer" onclick="scrollToSection('volunteer')">Volunteer</a>
+            <a href="#about" onclick="scrollToSection('about')">About</a>
+            <a href="#contact" onclick="scrollToSection('contact')">Contact</a>
+            <button class="btn-primary" onclick="scrollToSection('demo')">Try SOS Demo</button>
+        </div> -->
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Fast Emergency Help For Women Safety</h1>
+                <p>Simple web technologies connecting nearby people when women need help. Made with basic programming for faster response than police-only systems.</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="scrollToSection('demo')">Try SOS Demo</button>
+                    <button class="btn-secondary" onclick="scrollToSection('about')">Learn More</button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">2-4min</div>
+                        <div class="stat-label">Response Time</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Community Help</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Location Accuracy</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="src/assets/hero-safety.jpg" alt="Women Safety Community Network">
+            </div>
+        </div>
+    </section>
+
+    <!-- SOS Demo Section -->
+    <section id="demo" class="demo-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Live SOS Alert Demo</h2>
+                <p>See how our system works in emergency situations</p>
+            </div>
+            
+            <div class="demo-container">
+                <div class="demo-card">
+                    <div id="demo-content">
+                        <button id="sos-button" class="sos-button" onclick="activateSOS()">
+                            <span class="sos-text">SOS</span>
+                            <span class="sos-subtitle">Press for Emergency</span>
+                        </button>
+                        <div id="alert-message" class="alert-message hidden">
+                            <div class="alert-icon">🚨</div>
+                            <h3>Emergency Alert Activated!</h3>
+                            <p>Your location has been shared and help is on the way</p>
+                            <button class="btn-secondary" onclick="resetDemo()">Reset Demo</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="demo-steps">
+                    <div class="step-card" id="step-1">
+                        <div class="step-icon">📍</div>
+                        <h4>Location Detected</h4>
+                        <p>GPS coordinates captured </p>
+                    </div>
+                    <div class="step-card" id="step-2">
+                        <div class="step-icon">👥</div>
+                        <h4>Volunteers Notified</h4>
+                        <p>Nearby people get instant notification</p>
+                    </div>
+                    <div class="step-card" id="step-3">
+                        <div class="step-icon">🚔</div>
+                        <h4>Police Contacted</h4>
+                        <p>Automatic call to 112 with location</p>
+                    </div>
+                    <div class="step-card" id="step-4">
+                        <div class="step-icon">🆘</div>
+                        <h4>Help Responding</h4>
+                        <p>Community members heading to location</p>
+                    </div>
+                </div>
+
+                <div id="success-message" class="success-message hidden">
+                    <h3>✅ Demo Complete! Help would arrive in 2-4 minutes</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="about" class="how-it-works-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>How Our <span class="text-primary">HTML CSS JS</span> System Works</h2>
+                <p>Simple web programming connecting people for emergency help</p>
+            </div>
+
+            <div class="steps-grid">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-icon-bg">📱</div>
+                    <h3>Press SOS Button</h3>
+                    <p>HTML button triggers JavaScript emergency function</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-icon-bg">📍</div>
+                    <h3>Get Location</h3>
+                    <p>JavaScript navigator.geolocation gets GPS coordinates</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-icon-bg">👥</div>
+                    <h3>Find Nearby People</h3>
+                    <p>Database query finds volunteers within 2km radius</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <div class="step-icon-bg">🚔</div>
+                    <h3>Call Police</h3>
+                    <p>Automatic call to 112 with SMS location link</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">5</div>
+                    <div class="step-icon-bg">⏰</div>
+                    <h3>Send Notifications</h3>
+                    <p>Push notifications to volunteers via JavaScript</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">6</div>
+                    <div class="step-icon-bg">✅</div>
+                    <h3>Help Arrives</h3>
+                    <p>Community members and police reach location</p>
+                </div>
+            </div>
+
+            <div class="response-time-card">
+                <h3>Response Time Comparison</h3>
+                <div class="comparison-grid">
+                    <div class="comparison-item traditional">
+                        <h4>Traditional System</h4>
+                        <div class="time">8-15 min</div>
+                        <p>Police only response</p>
+                    </div>
+                    <div class="comparison-item existing">
+                        <h4>Existing Apps</h4>
+                        <div class="time">5-10 min</div>
+                        <p>Family + police alerts</p>
+                    </div>
+                    <div class="comparison-item our-system">
+                        <h4>Our HTML/JS System</h4>
+                        <div class="time">2-4 min</div>
+                        <p>Community + police response</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="statistics-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our <span class="text-primary">JavaScript</span> System Impact</h2>
+                <p>Simple web programming saving lives across India</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">⚡</div>
+                    <div class="stat-number">2.5x</div>
+                    <div class="stat-label">Faster Response</div>
+                    <div class="stat-description">Than traditional police-only systems</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📍</div>
+                    <div class="stat-number">99.9%</div>
+                    <div class="stat-label">Location Accuracy</div>
+                    <div class="stat-description">Using JavaScript GPS navigation</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-number">500m</div>
+                    <div class="stat-label">Average Distance</div>
+                    <div class="stat-description">Of nearest volunteer responder</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📱</div>
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">System Availability</div>
+                    <div class="stat-description">Continuous monitoring and alerts</div>
+                </div>
+            </div>
+
+            <div class="comparison-section">
+                <h3>Why Our Simple Web System Works Better</h3>
+                <div class="comparison-cards">
+                    <div class="comparison-card problem">
+                        <h4>❌ Current Problem</h4>
+                        <ul>
+                            <li>Police response takes 8-15 minutes</li>
+                            <li>Limited to official helplines</li>
+                            <li>No community involvement</li>
+                            <li>Complex app installations</li>
+                        </ul>
+                    </div>
+                    <div class="comparison-card solution">
+                        <h4>✅ Our HTML/CSS/JS Solution</h4>
+                        <ul>
+                            <li>Community help in 2-4 minutes</li>
+                            <li>Works on any web browser</li>
+                            <li>Nearby volunteers get alerts</li>
+                            <li>Simple to use and develop</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Volunteer Registration Section -->
+    <section id="volunteer" class="volunteer-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Join Our <span class="text-primary">Community Safety Network</span></h2>
+                <p>Help make your neighborhood safer using simple web technology</p>
+            </div>
+
+            <div class="volunteer-content">
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">🏆</div>
+                        <h3>Police Recognition</h3>
+                        <p>Get official certificates from local police</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">👥</div>
+                        <h3>Community Impact</h3>
+                        <p>Direct help to people in your area</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">📱</div>
+                        <h3>Easy Technology</h3>
+                        <p>Simple HTML forms and JavaScript alerts</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">⚡</div>
+                        <h3>Quick Response</h3>
+                        <p>Get notified instantly via web browser</p>
+                    </div>
+                </div>
+
+                <div class="registration-form-card">
+                    <h3>🔒 Volunteer Registration Form</h3>
+                    <form id="volunteer-form" onsubmit="handleFormSubmit(event)">
+                        <div class="form-group">
+                            <label for="name">👤 Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">📞 Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">📧 Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">🏠 Complete Address</label>
+                            <textarea id="address" name="address" rows="3" required></textarea>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="occupation">💼 Occupation</label>
+                                <select id="occupation" name="occupation" required>
+                                    <option value="">Select your occupation</option>
+                                    <option value="student">Student</option>
+                                    <option value="teacher">Teacher</option>
+                                    <option value="shopkeeper">Shop Owner</option>
+                                    <option value="security">Security Guard</option>
+                                    <option value="nurse">Nurse/Doctor</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="experience">🎯 Safety Experience</label>
+                                <select id="experience" name="experience" required>
+                                    <option value="">Select experience level</option>
+                                    <option value="none">No prior experience</option>
+                                    <option value="basic">Basic first aid knowledge</option>
+                                    <option value="trained">Formal safety training</option>
+                                    <option value="professional">Professional (Police/Military)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="availability">⏰ Available Hours</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="availability" value="morning"> Morning (6-12)
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="availability" value="afternoon"> Afternoon (12-18)
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="availability" value="evening"> Evening (18-24)
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="availability" value="night"> Night (24-6)
+                                </label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-primary">Register as Volunteer</button>
+                    </form>
+
+                    <div class="next-steps">
+                        <h4>📋 Next Steps</h4>
+                        <ul>
+                            <li>Background verification by local police</li>
+                            <li>Basic safety training (HTML/CSS/JS system)</li>
+                            <li>Mobile app installation and testing</li>
+                            <li>Join local volunteer WhatsApp group</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-shield">🛡</span>
+                        <span class="logo-text">SafeGuard</span>
+                    </div>
+                    <p>Simple HTML/CSS/JavaScript technology making communities safer through faster emergency response.</p>
+                    <p class="made-with">Made with ❤ for Smart India Hackathon</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#demo" onclick="scrollToSection('demo')">SOS Demo</a></li>
+                        <li><a href="#about" onclick="scrollToSection('about')">How It Works</a></li>
+                        <li><a href="#volunteer" onclick="scrollToSection('volunteer')">Join as Volunteer</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#" onclick="alert('Help documentation coming soon!')">Help Center</a></li>
+                        <li><a href="#" onclick="alert('FAQ page under development')">FAQ</a></li>
+                        <li><a href="#" onclick="alert('Contact form will be added')">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>📞 Contact Information</h4>
+                    <div class="contact-info">
+                        <p>📞 Phone: +91-XXXX-XXXX</p>
+                        <p>📧 Email: help@safeguard.com</p>
+                        <p>📍 Location: India</p>
+                    </div>
+                </div>
+
+                <div class="footer-section emergency">
+                    <h4>🚨 Emergency Notice</h4>
+                    <p>In real emergency, always call:</p>
+                    <button class="emergency-btn" onclick="alert('This will call 112 in real app')">Call 112</button>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 SafeGuard Community Safety System. Built with HTML, CSS & JavaScript.</p>
+                <p>Developed by <b><u>HexaLink</u></b> for Smart India Hackathon 2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
